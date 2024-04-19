@@ -22,8 +22,6 @@
 				"useConsistentArrayType": "error"
 			},
 			"nursery": {
-				"noUselessTernary": "error",
-				"useJsxKeyInIterable": "error",
 				"noDuplicateJsonKeys": "error"
 			}
 		}
