@@ -1,22 +1,13 @@
-import { items } from "@/constants/about"
 import { expect, test } from "@playwright/test"
 
 test("Test E2E", async ({ page }) => {
 	await page.goto("/")
-	await expect(page).toHaveTitle("Pouiiro's next plate")
+	await expect(page).toHaveTitle("Thin Livestreamer \"client\"")
 	await expect(page.locator("h1")).toHaveText(
-		"Hello world and welcome to Pouiiro’s next 🍽️"
+		"Thin Livestreamer \"client\""
 	)
 
-	await page.getByRole("link", { name: "What is included?" }).click()
-	await expect(page).toHaveURL("/about")
-	await expect(page.locator("h1")).toHaveText("List of things included:")
-
-	const allItems = await page.getByRole("listitem").all()
-
-	allItems.forEach(async (item, index) => {
-		await expect(item).toHaveText(items[index])
-	})
-
-	await page.getByRole("link", { name: "Go back home" }).click()
+	await page.getByRole("link", { name: "Explore streams" }).click()
+	await expect(page).toHaveURL("/livestreamers")
+	await expect(page.locator("h1")).toHaveText("Choose a streamer from the list, and get an embedded Twitch/YouTube player and chat.")
 })

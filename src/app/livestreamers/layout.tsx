@@ -19,9 +19,9 @@ export default async function Layout({
 	return (
 		<div className="container mx-auto grid md:grid-cols-5 sm:grid-cols-3 m-8">
 			<div className="col-span-1 m-2">
-				<h1 id="items-heading" className="font-bold">
+				<h2 id="items-heading" className="font-bold">
 					Streamers 🖥️
-				</h1>
+				</h2>
 				<StreamerAccordion streamers={livestreamers} />
 			</div>
 			<div className="md:col-span-4 sm:col-span-2">{children}</div>

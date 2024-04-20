@@ -7,23 +7,23 @@ import Link from "next/link"
 import { useState } from "react"
 
 const CustomField = () => {
-	const [channelName, setChannelName] = useState('')
-  const [platform, setPlatform] = useState('')
+	const [channelName, setChannelName] = useState("")
+	const [platform, setPlatform] = useState("twitch")
 
 	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		setChannelName(e.currentTarget.value)
 	}
 
-  const handleRadioChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setPlatform(e.currentTarget.value)
-  }
+	const handleRadioChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+		setPlatform(e.currentTarget.value)
+	}
 
 	return (
 		<>
 			<h3 className="font-semibold mt-16 mb-4">Find livestream</h3>
 
-			<div>
-        <Label>Channel name</Label>
+			<div className="flex flex-col">
+				<Label>Channel name</Label>
 				<input
 					type="text"
 					className="w-32 mt-2"
@@ -41,7 +41,7 @@ const CustomField = () => {
 						id="platform"
 						name="platform"
 						value="twitch"
-            onChange={handleRadioChange}
+						onChange={handleRadioChange}
 						defaultChecked
 					/>
 					<label htmlFor="twitch">Twitch</label>
@@ -53,8 +53,8 @@ const CustomField = () => {
 						id="platform"
 						name="platform"
 						value="youtube"
-            onChange={handleRadioChange}
-            disabled
+						onChange={handleRadioChange}
+						disabled
 					/>
 					<label htmlFor="youtube">YouTube</label>
 				</div>
