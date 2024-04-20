@@ -14,9 +14,9 @@ const fontSans = FontSans({
 })
 
 export const metadata: Metadata = {
-	title: "Pouiiro's next plate",
+	title: 'Thin livestreamer "client"',
 	description:
-		"Pouiiro's next plate is a nextjs boilerplate with basic needs."
+		"Easy access to livestreamers on Twitch and YouTube."
 }
 
 type Props = {
@@ -41,13 +41,13 @@ export default function RootLayout({ children }: Props) {
 					<ThemeToggler />
 					{children}
 					<h4 className="fixed inset-x-0 bottom-0 flex justify-center items-end pb-8">
-						Made with &hearts; by
+						Built upon 
 						<a
-							href="https://www.pouiiro.com"
+							href="https://github.com/Pouiiro/Pouiiros_next_plate"
 							target="_blank"
 							rel="noreferrer"
 							className="ml-1 font-medium italic text-blue-900 dark:text-blue-400 animate-pulse">
-							Pouiiro
+							Pouiiro/Pouiiros_next_plate
 						</a>
 					</h4>
 				</Providers>
