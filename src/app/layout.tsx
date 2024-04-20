@@ -51,7 +51,7 @@ export default function RootLayout({ children }: Props) {
 							</a>
 						</h4>
 						<h4>
-							Source code at 
+							Source code at
 							<a
 								href="https://github.com/Niclas661/nextjs"
 								target="_blank"

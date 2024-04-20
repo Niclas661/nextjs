@@ -1,9 +1,9 @@
 "use client"
 
-import ReactTwitchEmbedVideo from "react-twitch-embed-video"
-import YoutubeEmbedVideo from "youtube-embed-video"
 import { RefreshCcw } from "lucide-react"
 import { useParams, useRouter, useSearchParams } from "next/navigation"
+import ReactTwitchEmbedVideo from "react-twitch-embed-video"
+import YoutubeEmbedVideo from "youtube-embed-video"
 
 import { getYoutubeStream } from "./getYoutubeStream"
 
